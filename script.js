@@ -21,7 +21,7 @@ const buyButtons = document.querySelectorAll('.buy-btn');
 buyButtons.forEach(button => {
     button.addEventListener('click', () => {
         const pizzaName = button.parentElement.getAttribute('data-name');
-        alert(`Ви успішно купили: ${pizzaName}!`);
+        alert(`товар успішно додано до кошику: ${pizzaName}!`);
     });
 });
 
