@@ -12,6 +12,40 @@
             <span class="green">pizza</span><br>
             <span class="red">place</span>
         </div>
+        <div id="cart-icon" class="cart-icon">
+    🛒 
+</div>
+
+<aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>🛒 Твоє замовлення</h3>
+        <button id="close-cart">&times;</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <p>Разом: <span id="total-price">0</span> грн</p>
+    </div>
+    <button id="checkout-btn">Оплатити</button>
+</aside>
+        <div id="cart-sidebar" class="cart-sidebar">
+    <h3>🛒 Кошик</h3>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <span>Разом: </span><span id="total-price">0</span> грн
+    </div>
+    <button id="checkout-btn">Оплатити</button>
+</div>
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <h4>Оплата замовлення</h4>
+        <input type="text" id="card-number" placeholder="Введіть номер картки (16 цифр)">
+        <div class="modal-buttons">
+            <button id="confirm-payment">Підтвердити</button>
+            <button id="close-modal">Скасувати</button>
+        </div>
+    </div>
+</div>
 
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Пошук піци...">
@@ -70,6 +104,10 @@
     <footer>
      <h2>вул. Шкільна 35 м.Здолбунів</h2> 
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
