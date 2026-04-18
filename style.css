@@ -90,3 +90,133 @@ header {
 .char {
     height: 150px;
 }
+
+/* Кошик збоку */
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: #1a1a1a;
+    border-left: 3px solid #ff69b4;
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none; /* Сховано за замовчуванням */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #bdc3c7;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #7f8c8d;
+}
+
+/* Стиль іконки кошика */
+.cart-icon {
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Червоний кружечок з цифрою */
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff0000;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-family: Arial, sans-serif;
+}
+
+/* Оновлений кошик (виїжджає) */
+.cart-sidebar {
+    position: fixed;
+    right: -350px; /* Початково схований */
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: #111;
+    border-left: 4px solid #ff69b4;
+    padding: 20px;
+    color: white;
+    transition: right 0.4s ease; /* Плавна анімація виїзду */
+    z-index: 1000;
+}
+
+/* Клас для відкриття (додається через JS) */
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    color: #ff69b4;
+    font-size: 30px;
+    cursor: pointer;
+}
